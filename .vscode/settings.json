@@ -1,0 +1,8 @@
+{
+    // 自动移除0开头的前缀，默认：true
+    "cssrem.autoRemovePrefixZero": true,
+    // px转rem小数点最大长度，默认：6。
+    "cssrem.fixedDigits": 6,
+    // root font-size (unit: px), default: 16
+    "cssrem.rootFontSize": 37.5, 
+}

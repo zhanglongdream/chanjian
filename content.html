@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="theme-color" content="#f60">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="x5-orientation" content="portrait">
+  <title>2018世界·我们相信儿童艺术季儿童艺术大赛</title>
+  <link href="css/reset.css" rel="stylesheet" />
+  <link href="css/content.css" rel="stylesheet" />
+  <link href="css/dayTime.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/zepto.js"></script>
+  <script type="text/javascript">
+    (function (win, doc) {
+      var docEl = doc.documentElement;
+
+      function setRemUnit() {
+        var docWidth = docEl.clientWidth;
+        var rem = docWidth / 10;
+        docEl.style.fontSize = rem + 'px';
+      }
+      win.addEventListener('resize', function () {
+        setRemUnit();
+      }, false);
+      win.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+          setRemUnit();
+        }
+      }, false);
+      setRemUnit();
+      if (win.devicePixelRatio && win.devicePixelRatio >= 2) {
+        var testEl = doc.createElement('div');
+        var fakeBody = doc.createElement('body');
+        testEl.style.border = '0.5px solid transparent';
+        fakeBody.appendChild(testEl);
+        docEl.appendChild(fakeBody);
+        if (testEl.offsetHeight === 1) {
+          docEl.classList.add('hairlines');
+        }
+        docEl.removeChild(fakeBody);
+      }
+    })(window, document);
+  </script>
+  <script type="text/javascript" src=" https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+
+<body>
+  <div>
+    <img src="img/linelogo.png" class=" logo justify-contents" />
+    <div class="contentAll">
+      <div class="inputAll">
+        <span>姓名</span>
+        <input type="text" class="name"/>
+      </div>
+      <div class="radioAll radioGender">
+        <span>性别</span>
+        <div>
+          <input name="gender" id="man" type="radio" checked="checked" value="男"/>
+          <label for="man" class="manOne label">男</label>
+          <input name="gender" id="noman" type="radio" value="女"/>
+          <label for="noman" class="womanOne">女</label>
+        </div>
+      </div>
+      <div class="inputAll">
+        <span>年龄</span>
+        <input type="text" class="sex"/>
+      </div>
+            <div class="inputAll">
+              <span>年级</span>
+              <input type="text" class="theClass" />
+            </div>
+            <!-- <div class="chushengnianyue"></div> -->
+                  <div class="inputAll chushengnianyueInput" id="start_date">
+                    请选择出生日期
+                    <!-- <input type="text" class="dateTime"  name="start_date" id="start_date"  placeholder="选择出生年月日" readonly="readonly"/> -->
+                  </div>
+      <div class="inputAll">
+        <span>家长姓名</span>
+        <input type="text" class="partentSex"/>
+      </div>
+      <div class="inputAll">
+        <span>联系电话</span>
+        <input type="text" class="phone"/>
+      </div>
+<div class="inputAll">
+  <span>微信号</span>
+  <input type="text" class="weChatTime" />
+</div>
+<div class="inputAll">
+  <span>国籍</span>
+<input type="text" class="nationality" />
+</div>
+<div class="inputAll">
+  <span>所在省市</span>
+<input type="text" class="citiesProvinces" />
+</div>
+<div class="inputAll">
+  <span>学校</span>
+  <input type="text" class="citieshistory" />
+</div>
+<div class="inputAll">
+  <span>介绍人/机构</span>
+  <input type="text" class="citiesSelf" />
+</div>
+  <div class="inputAll">
+        <span>作品名称</span>
+        <input type="text" class="inputWorks"/>
+      </div>
+      <div class="textareaCode">
+        <textarea maxlength="100"></textarea>
+        <span>作品描述（100字以内）</span>
+      </div>
+      <div class="radioList radioSkills">
+        <div>参选项目组</div>
+        <div><input name="arts" value="1" id="arts" type="radio" checked="checked" /><label for="arts" class="label artsOne">美术组</label>
+        <input name="arts" id="photography" value="2" type="radio" /><label for="photography" class="photographyOne">摄影组</label>
+        <input name="arts" id="calligraphy" value="3" type="radio" /><label for="calligraphy" class="calligraphyOne">书法组</label>
+<input name="arts" id="calligraphys" value="4" type="radio" /><label for="calligraphys" class="calligraphyOnes">其他组</label>
+</div>
+      </div>
+      <div class="radioList radioTime">
+        <div>年龄组别</div>
+        <div><input name="children" id="children" value="1" type="radio" checked="checked"/><label for="children" class="youngChildren label">幼儿组（3岁以上）</label>
+        <input name="children" id="school" type="radio" value="2"/><label for="school" class="children">小学组（1-5年级）</label></div>
+      </div>
+      <div class="updataContent">
+        <div>上传作品</div>
+        <div id="imgUpdate">
+           <div class="transformTranslateAll zhibiao"></div>
+           <input type="file" id="photo"/>
+           <div class="bgUpdata"></div>
+        </div>
+        <p>上传一张自己作品的清晰电子照片（不低于2M）</p>
+      </div>
+      
+<div class="radioList dashichuangying">
+  <div>是否愿意参加大师创作营</div>
+  <div>
+<input name="dashichuang" id="yesdashi" value="1" type="radio" checked="checked" />
+<label for="yesdashi" class="yesdashi label">是</label>
+<input name="dashichuang" id="nodashi" type="radio" value="0" />
+<label for="nodashi" class="nodashi">否</label>
+  </div>
+
+</div>
+  <div class="enterIpnut">
+    <input type="checkbox" name="rememberMe" id="rememberMe" />
+    <label for="rememberMe">我已阅读2018世界 ● 我们相信儿童艺术季儿童艺术大赛章程。</label>
+  
+  </div>
+    </div>
+    <!-- <div id="inputError">11</div> -->
+    <div id="submitContent">
+      <button>提交作品</button>
+    </div>
+  </div>
+  <div class="success transformTranslateAll">作品提交成功，请耐心等待官方审核。</div>
+  <div class="dialog-transform">
+    <!-- <p>提交作品错误</p> -->
+    <div id="inputError">1111</div>
+    <button>确定</button>
+  </div>
+  <div class="dialog-bg"></div>
+  <script src="js/dayTime.js"></script>
+  <script type="text/javascript" src="js/content.js"></script>
+  <!-- <script src="js/exif.js"></script> -->
+</body>
+</body>
+
+</html>
